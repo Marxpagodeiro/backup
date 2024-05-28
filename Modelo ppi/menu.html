@@ -37,22 +37,42 @@
             </ul>
         </nav>
     </header>
-
-    <div id="us" class="usuario">
-        <img  id="user" src="img/do-utilizador.png" alt="usuario">
-        <span>Bruno Almeida Machado</span>
-        <p>____________________________</p>
-        <span>52 Seguidores</span>
-        <Span>64 Seguindo</Span>
-        <button>Perfil</button>
-
-    </div>
     
+    <main class="main">
 
-    <section class="meio">
-        <article>
-        </article>
-    </section>
+        <!-- Formulário de postagem -->
+        <div class="newPost">
+    
+          <div class="infoUser">
+            <div class="imgUser">
+            </div>
+            <strong>Usuário</strong>
+          </div>
+    
+          <form action="" class="formPost" id="formPost">
+            <textarea name="textarea" placeholder="Fazer uma publicação ...." id="textarea"></textarea>
+            <div class="iconsAndButton">
+              <div class="icons">
+                <button class="btnFileForm">
+                  <img src="img/adicionar-imagem.png" alt="Adicionar uma imagem">
+                </button>
+                <button class="btnFileForm">
+                  <img src="img/adicionar.png" alt="Adicionar um gif">
+                </button>
+                <button class="btnFileForm">
+                  <img src="img/adicionar-video.png" alt="Adicionar um vídeo">
+                </button>
+              </div>
+    
+              <button type="submit" id="botao" class="btnSubmitForm">Publicar</button>
+            </div>
+          </form>
+        </div>
+    
+        <ul class="posts" id="posts"></ul>
+    
+      </main>
+      <script type="module" src="js/FormPost.js"></script>
 </body>
 
 </html>
