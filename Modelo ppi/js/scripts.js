@@ -7,12 +7,14 @@ const modal = document.querySelector("#modal");
 const modalCadastro = document.querySelector("#modal_cadastro")
 const form = document.querySelector(".form");
 const fromCadastro = document.querySelector(".form_cadastro")
-const txtusuario = document.getElementById("txtusuario");
-const txtsenha = document.getElementById("txtsenha");
-const txtnome = document.querySelector("txtnome");
-const txtdata = document.querySelector("txtdata");
-const txtemail = document.querySelector("txtemail");
-const txtCsenha = document.querySelector("txtCsenha ");
+const txtusuario = document.querySelector("#txtusuario");
+const txtUsuario = document.querySelector("#txtUsuario");
+const txtsenha = document.querySelector("#txtsenha");
+const txtSenha = document.querySelector("#txtSenha");
+const txtnome = document.querySelector("#txtnome");
+const txtdata = document.querySelector("#txtdata");
+const txtemail = document.querySelector("#txtemail");
+const txtCsenha = document.querySelector("#txtCsenha ");
 
 
 const toggleModal = () => {
@@ -74,18 +76,18 @@ fromCadastro.addEventListener("submit", (el) => {
 
 function validaCadastro() {
   // Valores dos elementos
-  let usuarioValor = txtusuario.value.trim();
-  let senhaValor = txtsenha.value.trim();
+  let userValor = txtUsuario.value.trim();
+  let senValor = txtSenha.value.trim();
   let nomeValor = txtnome.value.trim();
   let emailValor = txtemail.value.trim();
   let dataValor = txtdata.value.trim();
   let CsenhaValor = txtCsenha.value.trim();
   
   //Verificando usuario
-  if (usuarioValor === "") {
-    MostraErro(txtusuario, "Usuário deve ser preenchido!");
+  if (userValor === "") {
+    MostraErro(txtUsuario, "Usuário deve ser preenchido!");
   } else {
-    MostraSucesso(txtusuario);
+    MostraSucesso(txtUsuario);
   }
 
   if (nomeValor === "") {
@@ -109,16 +111,18 @@ function validaCadastro() {
 
 
   //Verificando senha
-  if (senhaValor === "") {
-    MostraErro(txtsenha, "Senha deve ser preenchida");
-  } else if (senhaValor.length < 6 || senhaValor.length > 30) {
-    MostraErro(txtsenha, "Senha deve ter entre  6 a 30 caracteres");
-  } else if(senhaValor === CsenhaValor){
-    MostraErro(txtsenha, "A senha deve ser iguas a confirmar senha");
+  if (senValor === "" || CsenhaValor ==="") {
+    MostraErro(txtSenha, "Senha deve ser preenchida");
+    MostraErro(txtCsenha,"O confirmar senha deve ser preenchido");
+  } else if (senValor.length < 6 || senValor.length > 30) {
+    MostraErro(txtSenha, "Senha deve ter entre  6 a 30 caracteres");
+  } else if (senValor !== CsenhaValor){
+    MostraErro(txtSenha, "A senha deve ser iguas a confirmar senha");
     MostraErro(txtCsenha,"A senha deve ser iguas a confirmar senha");
   } 
   else {
-    MostraSucesso(txtsenha);
+    MostraSucesso(txtSenha);
+    MostraSucesso(txtCsenha);
   }
 
 }

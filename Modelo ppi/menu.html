@@ -13,19 +13,17 @@
     <header>
         <div class="dir">
             <img id="img" src="img/WhatsApp Image 2024-04-08 at 11.42.03.jpeg" alt="logo">
-            <input onclick="AbrirPesquisa()" type="text" id="txtBusca" placeholder="Pesquisar..."/>
-            <div class="list">
-                <ul id="gmDropdown">
-                    <l><a href="">Rafael Ribeiro Machado</a></l>
-                    <l><a href="">Bruno Almeida Machado</a></l>
-                    <l><a href="">Mateus Correia De Andrade</a></l>
-                    <l><a href="">Boaz</a></l>
-                    <l><a href="">Richard</a></l>
-                    <l><a href="">Henrique</a></l>
-                    <l><a href="">João Pedro</a></l>
-                </ul>
+            <input onkeyup="filterFunction()" type="text" id="txtBusca" placeholder="Pesquisar..."/>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="">Rafael Ribeiro Machado</a>
+                <a href="">Bruno Almeida Machado</a>
+                <a href="">Mateus Correia De Andrade</a>
+                <a href="">Boaz</a>
+                <a href="">Richard</a>
+                <a href="">Henrique</a>
+                <a href="">João Pedro</a>
             </div>
-            <button  id="btnBusca"><img id="iconb" src="img/lupa.png" alt=""></button>
+            <button onclick="myFunction()"  id="btnBusca"><img id="iconb" src="img/lupa.png" alt=""></button>
         </div>
         <h2>Sophinous</h2>
         <nav>
@@ -34,11 +32,23 @@
                 <l><a href=""><img class="icon" src="img/casa.png" alt=""></a></l>
                 <l><a href=""><img class="icon" src="img/pasta.png" alt=""></a></l>
                 <l><a href="calendario.html"><img class="icon" src="img/data-limite.png" alt=""></a></l>
-                <l><a href=""><img class="icon" src="img/do-utilizador.png" alt=""></a></l>
+                <l><a href="" onclick="mostrarUsuario()"><img class="icon" src="img/do-utilizador.png" alt=""></a></l>
                 <l><a href="index.html"><img class="icon" src="img/porta.png" alt=""></a></l>
             </ul>
         </nav>
     </header>
+
+    <div id="us" class="usuario">
+        <img  id="user" src="img/do-utilizador.png" alt="usuario">
+        <span>Bruno Almeida Machado</span>
+        <p>____________________________</p>
+        <span>52 Seguidores</span>
+        <Span>64 Seguindo</Span>
+        <button>Perfil</button>
+
+    </div>
+    
+
     <section class="meio">
         <article>
         </article>

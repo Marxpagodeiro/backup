@@ -109,22 +109,35 @@ body {
     flex-direction: column;
 }
 
-.list #gmDropdown{
+.dropdown-content {
     display: none;
     position: absolute;
-    overflow: hidden;
-    width: 8%;
-    list-style-type: none;
-    margin-top: 0;
-    padding-left: 0;
-}
-.list #gmDropdown a {
+    background-color:#D9D9D9;
+    min-width: 15rem;
+    overflow: auto;
+    margin-top: 3.8rem;
+    margin-left: 8.5rem;
+    z-index: 1;
+  }
+  
+.dropdown-content a {
     color: black;
-    padding: 0.8rem 1rem;
+    padding: 12px 16px;
+    font-family: "Grand Hotel", cursive;
+    font-size: 1.2rem;
     text-decoration: none;
+    max-height:2.8rem;
     display: block;
-    font-family: 'Open Sans', sans-serif;
 }
-.list #gmDropdown a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #8EA390;}
 
-.show {display:block;}
+.show {display: block;}
+
+.usuario{
+    background-color: #D9D9D9;
+    position: absolute;
+    display: none;
+    overflow: auto;
+    min-width: 15rem;
+    z-index: 1;
+}
