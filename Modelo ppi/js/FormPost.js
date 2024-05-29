@@ -31,7 +31,7 @@ export class FormPost {
         const time = this.getTime();
         newPost.innerHTML = `
         <div class="infoUserPost">
-          <div class="imgUserPost"></div>
+          <div class="imgUserPost"><img src="img/do-utilizador.png" alt=""></div>
 
           <div class="nameAndHour">
             <strong>Usuário</strong>
