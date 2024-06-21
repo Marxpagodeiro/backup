@@ -40,7 +40,7 @@
         </div>
         <img id="login1" src="img/WhatsApp Image 2024-04-08 at 11.42.03.jpeg" alt="Logo">
 
-        <a id="menu" href="/Modelo ppi/menu.html"></a>
+        <a id="menu" href="/Modelo ppi/menu.php"></a>
         <div id="modal_login">
             <form class="form">
                 <div class="form-control">
